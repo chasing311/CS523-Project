@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: { operator: string } })
                 </CardItem>
             </Grid>
             <Grid md={12} xs={12}>
-                <PieChart title="Tesecases" chartSeries={Object.values(cases)} labels={Object.keys(cases)} sx={{ height: '100%' }} />
+                <PieChart title="Testcases" chartSeries={Object.values(cases)} labels={Object.keys(cases)} sx={{ height: '100%' }} />
             </Grid>
             <Grid md={12} xs={12}>
                 <PieChart title="Fields" chartSeries={Object.values(fields)} labels={Object.keys(fields)} sx={{ height: '100%' }} />
