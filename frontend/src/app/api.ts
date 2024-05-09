@@ -13,7 +13,7 @@ export interface IIssueStatus {
 
 export interface ITestResult {
     operator: string,
-    trail: number,
+    trial: number,
     alarm: number;
 }
 

@@ -30,7 +30,7 @@ export function ResultList({ results = [], sx }: ResultListProps): React.JSX.Ele
           <TableHead>
             <TableRow>
               <TableCell>Operator</TableCell>
-              <TableCell>Trails</TableCell>
+              <TableCell>Trials</TableCell>
               <TableCell>Alarms</TableCell>
             </TableRow>
           </TableHead>
@@ -39,7 +39,7 @@ export function ResultList({ results = [], sx }: ResultListProps): React.JSX.Ele
               return (
                 <TableRow hover key={result.operator}>
                   <TableCell>{result.operator}</TableCell>
-                  <TableCell>{result.trail}</TableCell>
+                  <TableCell>{result.trial}</TableCell>
                   <TableCell>{result.alarm}</TableCell>
                   <TableCell>
                     <Button

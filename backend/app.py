@@ -28,7 +28,7 @@ def operator_status():
         {"$group": {
             "_id": None,
             "operators": {"$sum": 1},
-            "trials": {"$sum": "$trail"},
+            "trials": {"$sum": "$trial"},
             "alarms": {"$sum": "$alarm"}
         }}
     ]
@@ -58,7 +58,7 @@ def list_operators():
     db = db_connection()
     collection = db["results"]
     records = list(collection.find({}, {"_id": 0}))
-    return jsonify(records[0] if type(records) is list else records)
+    return jsonify(records)
 
 @app.route('/operator/details', methods=['GET'])
 def operator_details():

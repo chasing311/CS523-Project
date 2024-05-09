@@ -16,6 +16,7 @@ export default async function Page() {
   const [operatorStatus, issueStatus, testResults] = await Promise.all([getOperatorStatus(), getIssueStatus(), getTestResults()]);
   const { operators, trials, alarms } = operatorStatus;
   const { issues, fixed } = issueStatus;
+
   return (
     <Grid container spacing={3}>
       <Grid lg={3} sm={6} xs={12}>
@@ -24,17 +25,17 @@ export default async function Page() {
         </CardItem>
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <CardItem sx={{ height: '100%' }} value={trials} title="Total Trails">
+        <CardItem sx={{ height: '100%' }} value={trials} title="Total Trials">
           <BarricadeIcon fontSize="var(--icon-fontSize-lg)" />
         </CardItem>
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
         <CardItem sx={{ height: '100%' }} value={alarms} title="Total Alarms" iconColor="var(--mui-palette-error-main)">
           <ReceiptIcon fontSize="var(--icon-fontSize-lg)" />
-        </CardItem>      
-        </Grid>
+        </CardItem>
+      </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <IssueProgress sx={{ height: '100%' }} total={issues} fixed={fixed}/>
+        <IssueProgress sx={{ height: '100%' }} total={issues} fixed={fixed} />
       </Grid>
 
       <Grid md={12} xs={12}>
